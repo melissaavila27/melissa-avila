@@ -1,0 +1,391 @@
+@import './colores.scss';
+@import './fuentes.scss';
+
+$theme: 'dark-mode';
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.ancho{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+}
+
+header{
+    width: 100%;
+    background: $color-principal;
+    height: 50%;
+}
+header div p a{
+    text-decoration: none;
+}
+
+.logo{
+    width: 30%;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+}
+
+
+.logo p a{
+    color: #ffff;
+    font-family: $fuente-principal;
+    font-size: 40px;
+    font-weight: bolder;
+    }
+
+nav{
+    width: 70%;
+    height: 70px;
+    float: left;
+    text-align: right;
+    padding-top: 24px;
+
+    li{
+        display: inline;
+
+        a{
+            position: relative;
+            color: #ffff;
+            font-size: 15px;
+            font-family: $fuente-principal;
+            padding-left: 15px;
+            font-weight: bold; 
+            padding: 6px 10;
+            text-decoration: none;
+        }
+        
+    
+    }    
+    
+}
+
+
+
+
+nav ul li a:before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: rgb(253, 195, 195);
+    transition: all 0.4s ease;
+}
+
+nav ul li a:hover:before{
+width: 100%;
+text-decoration: none;
+}
+
+nav ul li.center a:before{
+    
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+
+.container{
+    width: 60%;
+    height: 500px;
+    /*background: rgb(250, 208, 208);*/
+    margin: 50px auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.hijo{
+    background: cornsilk;
+    width: 200px;
+    height: 500px;
+    color: $color-principal;
+    margin: 30px;
+    padding: 30px;
+    font-size: 35px;
+    text-align: center;
+    font-family: $fuente-principal;
+    font-weight: bolder;
+    border-radius: 35px;
+}
+
+
+body{
+    
+    background-color: rgb(247, 193, 206);
+
+}
+
+.indeximg{
+   width: 1500px;
+   height: 720px;
+  align-content: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    font-family: $fuente-principal;
+
+}
+
+
+
+.slide{
+    position: relative;
+    color: aliceblue;
+    font-family: $fuente-principal;
+
+    h1{
+        font-size: 70px;
+        padding: 18%;
+        text-align: center;
+    
+    }
+}
+
+.slide__titulo{
+    position: absolute;
+    // background: rgb(0 0 0 / 50%);
+    height: 760px;
+    width: 1519px;
+}
+
+
+.btn-content{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* ESTE BOTON AFECTA A LOS DEMÁS  */
+
+button{
+    font-family: $fuente-principal;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.4 linear;
+    
+
+}
+
+
+button:hover{
+    color: rgb(255, 255, 255);
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #FF3E68; */
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0, 5, 1.6, 0.4, 0.7);
+    border-radius: 15px;
+
+    
+}
+
+.btn::before{
+    transform: scaleX(0);
+}
+
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+.nosotros{
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.columna{
+    background: #ffffff;
+    color: rgb(80, 80, 80);
+    font-family:  $fuente-principal;
+    text-align: justify;
+    font-size: 20px;
+    top: 50%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 18px; 
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.padre1{
+    display: flex;
+ }
+
+
+.main1{
+    
+     font-family:  $fuente-principal;
+     font-size: 20px;
+     margin: 0 auto;
+     width: 80vw;
+     height: 40vw;
+     display: grid;
+     grid-template-columns: repeat(2,1fr); 
+    align-items: center;
+    }
+
+    .img-nosotros{
+        margin: 110px;
+        display: block;
+
+    }
+
+h1{
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+span{
+  color:  $color-principal;
+}
+
+.title{
+    text-align: center;
+    font-size: 60px;
+    
+    margin-top: 100px;
+    font-weight: 100;
+    font-family:  $fuente-principal;
+    font-weight: bolder;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family:  $fuente-principal;
+    margin: auto;
+
+    .card{
+    
+        width: 330px;
+        height: 430px;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 20px;
+        text-align: center;
+        transition: all 0.25s;
+
+        h4{
+            font-weight: 600;
+            font-size: 25px;
+            padding: 20px;
+        }
+    }
+
+}
+
+
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+
+.container .card h4{
+    font-weight: 600;
+    font-size: 25px;
+    padding: 20px;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 600;
+    text-decoration: none;
+    color: $color-principal;
+    
+    
+}
+
+
+.slide img{
+    height: 100%;
+}
+
+
+.botonindex{
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    height: 100vh;
+}
+
+.btn btn1{
+    border: 3px solid rgba(100, 100, 100, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 300px;
+    font-family:  $fuente-principal;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #faf4f5;
+    background-size: 300px;
+}
+
+h5{
+    font-family:  $fuente-principal;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #f5f5f5;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    margin: 30%;
+}
+
+.btn-secondary dropdown-toggle{
+
+   margin-top: 50%; 
+}
+
+
+
+
+@if $theme == 'dark-mode' {
+
+    .servicios {
+        $color-principal
+    }
+}
+
